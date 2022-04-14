@@ -58,4 +58,34 @@ themeToggleBtn.addEventListener('click', () => {
         localStorage.removeItem('currentTheme');
     }
 });
+
 // Swiper
+const swiper = new Swiper(".swiper", {
+    // how many slides to show
+    slidesPerView: 1,
+
+    // how much space between slides
+    spaceBetween: 20,
+
+    navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+    },
+
+    // make the pagination indicators work
+    pagination: {
+        el: '.swiper-pagination'
+    },
+
+    // responsive breakpoints for how many slides to show at that view
+    breakpoints: {
+        // 700px and up shows 2 slides
+        700: {
+            slidesPerView: 2
+        },
+        // 1200px and up shows 3 slides
+        1200: {
+            slidesPerView: 3
+        }
+    }
+});
